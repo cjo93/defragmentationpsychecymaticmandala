@@ -82,3 +82,21 @@ Formula for calculating System Coherence:
 - **Projector**: Vector Beam (Directed) / Soliton
 - **Manifestor**: Impulse Wave (Impact)
 - **Reflector**: Sampling Field (Mirror)
+
+## VISUAL PROTOCOL (v1.4)
+The Graphical Interface as Cymatic Resonator.
+
+### Stratum Concept (Scale Transitions)
+- **Stratum A**: Individual (Single Tile, Reflection).
+- **Stratum B**: Penta (3x3 Grid, System Beams).
+- **Stratum C**: Collective (Infinite Grid, Fog).
+- **Interaction**: "Semantic Zoom" via Scroll Wheel toggles strata.
+
+### Visual Jurisprudence
+- **Background**: True Black (#000000).
+- **Signal**: Pure White (#FFFFFF).
+- **Post-Processing**:
+    - High-Gain Halation (Bloom).
+    - Lens Stress (Chromatic Aberration) on tension.
+    - Zero Point Field (Noise).
+- **Typography**: Monospace mandatory (e.g., JetBrains Mono).

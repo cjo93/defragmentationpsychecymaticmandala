@@ -2,8 +2,9 @@
 import { useState, Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
-import { EffectComposer, Bloom, Noise, Vignette } from '@react-three/postprocessing';
+import { EffectComposer, Bloom, Noise, Vignette, ChromaticAberration } from '@react-three/postprocessing';
 import { EntrySequence } from './experience/EntrySequence';
+import * as THREE from 'three';
 import { TheFloor } from './experience/TheFloor';
 import { Leva } from 'leva';
 
@@ -28,10 +29,14 @@ function App() {
           {/* Global Environment */}
           <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
 
-          {/* Post Processing for "Void Aesthetic" */}
+          {/* Post Processing for "Void Aesthetic" (v1.4 Spec) */}
           <EffectComposer enabled={true} autoClear={false}>
+            {/* High-Gain Halation */}
             <Bloom luminanceThreshold={0.2} mipmapBlur intensity={1.5} radius={0.5} />
+            {/* The Noise Floor (Zero Point Field) */}
             <Noise opacity={0.05} />
+            {/* Lens Stress / Analog Simulation */}
+            <ChromaticAberration offset={new THREE.Vector2(0.002, 0.002)} radialModulation={false} modulationOffset={0} />
             <Vignette eskil={false} offset={0.1} darkness={1.1} />
           </EffectComposer>
         </Suspense>
