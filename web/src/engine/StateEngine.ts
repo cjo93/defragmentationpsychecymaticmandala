@@ -1,6 +1,6 @@
 // web/src/engine/StateEngine.ts
 import { calculatePhysicsState, type WaveformType } from './physics/Waveforms';
-import { SUBJECT_ALPHA } from './profiles/SubjectAlpha';
+import { DEFAULT_PROFILE } from './profiles/DefaultProfile';
 import { SEMANTICS } from '../config/Semantics';
 
 export interface DefragState {
@@ -31,18 +31,9 @@ const cyrb53 = (str: string, seed = 0) => {
 
 export const calculateState = (dob: string, location: string, _currentTime: number): DefragState => {
   // 1. Astrometry Layer
-  // For the prototype "Subject Alpha" mode, we bypass dynamic astrometry parsing
-  // and use the canonical profile.
-  const isSubjectAlpha = true;
-
-  let physicsState;
-
-  if (isSubjectAlpha) {
-     physicsState = calculatePhysicsState(SUBJECT_ALPHA.activeGates, SUBJECT_ALPHA.type);
-  } else {
-     // Fallback / Mock
-     physicsState = calculatePhysicsState([1, 2, 3], 'Generator');
-  }
+  // For the prototype, we use the Default Profile logic to demonstrate the engine.
+  // In production, this would parse the actual DOB/Location inputs.
+  const physicsState = calculatePhysicsState(DEFAULT_PROFILE.activeGates, DEFAULT_PROFILE.type);
 
   // 2. Derive Standard Props from Physics
   const coherence = physicsState.vector[0]; // Logic = Coherence/Structure
@@ -74,7 +65,7 @@ export const calculateState = (dob: string, location: string, _currentTime: numb
     energy,
     tension,
     color,
-    archetype: "Subject Alpha",
+    archetype: "Projector Archetype",
     glyphSeed: seed,
     waveform: physicsState.waveform,
     waveformLabel,

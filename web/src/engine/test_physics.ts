@@ -1,10 +1,10 @@
 // web/src/engine/test_physics.ts
 import { calculateState } from './StateEngine';
-import { SUBJECT_ALPHA } from './profiles/SubjectAlpha';
+import { DEFAULT_PROFILE } from './profiles/DefaultProfile';
 
-const state = calculateState(SUBJECT_ALPHA.dob, SUBJECT_ALPHA.location, Date.now());
+const state = calculateState(DEFAULT_PROFILE.dob, DEFAULT_PROFILE.location, Date.now());
 
-console.log("Subject Alpha Physics State:");
+console.log("User Zero Physics State:");
 console.log("Waveform:", state.waveform);
 console.log("Vector:", state.vector);
 console.log("Coherence:", state.coherence);

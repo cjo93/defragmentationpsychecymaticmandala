@@ -1,9 +1,9 @@
 // web/src/engine/test_semantics.ts
 import { calculateState } from './StateEngine';
-import { SUBJECT_ALPHA } from './profiles/SubjectAlpha';
+import { DEFAULT_PROFILE } from './profiles/DefaultProfile';
 import { SEMANTICS } from '../config/Semantics';
 
-const state = calculateState(SUBJECT_ALPHA.dob, SUBJECT_ALPHA.location, Date.now());
+const state = calculateState(DEFAULT_PROFILE.dob, DEFAULT_PROFILE.location, Date.now());
 
 console.log("--- v5.0 Semantics Verification ---");
 console.log("Waveform (Physics):", state.waveform);

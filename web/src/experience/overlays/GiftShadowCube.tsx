@@ -13,9 +13,9 @@ export function GiftShadowCube({ visible, value = 0.5 }: { visible: boolean, val
     meshRef.current.rotation.y += delta * 0.3;
 
     // Vector Slide Logic (Tri-Vector)
-    // Flatten along X-Axis if Logic Dominant (Subject Alpha)
-    // We assume a prop or context for 'vector' will be passed, but for now we mock Subject Alpha behavior
-    // if a certain flag is set, or just use the slider to demonstrate the distortion principle.
+    // Flatten along X-Axis if Logic Dominant (User Zero / Default Profile)
+    // We assume a prop or context for 'vector' will be passed, but for now we mock the behavior
+    // to demonstrate the distortion principle.
 
     // Morph:
     // "Result: Cube slides heavily along X-Axis, flattening geometry into a plane"
@@ -23,7 +23,7 @@ export function GiftShadowCube({ visible, value = 0.5 }: { visible: boolean, val
 
     const slideFactor = value; // 0 (Gift/Structure) -> 1 (Shadow/Entropy)
 
-    // If Logic Dominant (Alpha), we flatten X.
+    // If Logic Dominant, we flatten X.
     const scaleX = 1 + slideFactor * 2;
     const scaleY = 1 - slideFactor * 0.5;
     const scaleZ = 1 - slideFactor * 0.5;

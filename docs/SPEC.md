@@ -62,7 +62,7 @@ The "Hard Science" layer powering the logic.
 
 ### III. Vector Slide Cube (Interface)
 - **Tri-Vector State**: Normalized vector $\vec{V} = (x, y, z)$ representing circuitry balance.
-- **Subject Alpha (Chad)**: High Logic, Low Tribal.
+- **Projector Archetype**: High Logic, Low Tribal.
 - **Result**: Cube slides heavily along **X-Axis**, flattening geometry into a plane of strategic sight.
 
 ## SEMANTIC NORMALIZATION (v5.0)
