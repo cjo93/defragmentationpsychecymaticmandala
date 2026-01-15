@@ -7,16 +7,28 @@ import * as THREE from 'three';
 export function GiftShadowCube({ visible, value = 0.5 }: { visible: boolean, value?: number }) {
   const meshRef = useRef<THREE.Mesh>(null!);
 
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (!visible || !meshRef.current) return;
     meshRef.current.rotation.x += delta * 0.2;
     meshRef.current.rotation.y += delta * 0.3;
 
-    // Morph geometry based on "Gift vs Shadow" slider (value)
-    // 0 = Gift (Perfect Cube), 1 = Shadow (Distorted)
-    // Minimal distortion implementation for prototype
-    const scale = 1 + (value * 0.5 * Math.sin(state.clock.elapsedTime));
-    meshRef.current.scale.set(scale, scale, scale);
+    // Vector Slide Logic (Tri-Vector)
+    // Flatten along X-Axis if Logic Dominant (Subject Alpha)
+    // We assume a prop or context for 'vector' will be passed, but for now we mock Subject Alpha behavior
+    // if a certain flag is set, or just use the slider to demonstrate the distortion principle.
+
+    // Morph:
+    // "Result: Cube slides heavily along X-Axis, flattening geometry into a plane"
+    // We simulate this "Slide" by scaling X heavily and Y/Z lightly based on 'value' (Shadow/Entropy).
+
+    const slideFactor = value; // 0 (Gift/Structure) -> 1 (Shadow/Entropy)
+
+    // If Logic Dominant (Alpha), we flatten X.
+    const scaleX = 1 + slideFactor * 2;
+    const scaleY = 1 - slideFactor * 0.5;
+    const scaleZ = 1 - slideFactor * 0.5;
+
+    meshRef.current.scale.set(scaleX, scaleY, scaleZ);
   });
 
   if (!visible) return null;

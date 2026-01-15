@@ -44,3 +44,41 @@ Shift from "Healing" (Stillness/Garage) to "Integration" (Motion/Dance Floor).
 
 ## DELIVERABLES
 - **Web**: Vite + React + Three.js (R3F).
+
+## CORE PHYSICS & MATHEMATICS STACK (ENGINE v2)
+The "Hard Science" layer powering the logic.
+
+### I. Astrometry & Temporal Mechanics
+- **Keplerian Orbital Position**: precise calculation of Sun ({sun}$) and Earth ({earth}$) using Kepler’s Equation ( = E - e \sin E$).
+- **Solar Arc Regression**: "Unconscious/Red" database found by regressing Sun's position 88 degrees.
+- **Hexagrammatic Index**: Mapping -bash-360$ degree zodiac to 64-bit binary code (Gates).
+
+### II. Cymatic Resonance (User State)
+- **Signature Waveform**:
+    - **Projector (Subject Alpha)**: **Soliton Wave** (Focused Beam, non-dispersing).
+    - **Generator**: Sine Wave (Enveloping).
+- **Circuitry Frequency**:
+    - **Logic Dominant**: High-frequency, repeating standing wave (Steel Blue).
+
+### III. Vector Slide Cube (Interface)
+- **Tri-Vector State**: Normalized vector $\vec{V} = (x, y, z)$ representing circuitry balance.
+- **Subject Alpha (Chad)**: High Logic, Low Tribal.
+- **Result**: Cube slides heavily along **X-Axis**, flattening geometry into a plane of strategic sight.
+
+## SEMANTIC NORMALIZATION (v5.0)
+The "Rosetta Stone" translating Esoteric Mechanics into Grid Physics.
+
+### Circuitry Translation
+- **Tribal**: "Base Load" (Infrastructure). Risk: Stagnation.
+- **Individual**: "Variable Spike" (Mutation). Risk: Instability.
+- **Collective**: "Network Logic" (Distribution). Risk: Depersonalization.
+
+### Entropy Engine
+Formula for calculating System Coherence:
+1359Entropy = (TransitLoad \times 0.4) + (BioInstability \times 0.4) + (CognitiveDissonance \times 0.2)1359
+
+### Waveform Types
+- **Generator**: Envelope Wave (Sustained)
+- **Projector**: Vector Beam (Directed) / Soliton
+- **Manifestor**: Impulse Wave (Impact)
+- **Reflector**: Sampling Field (Mirror)
